@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  realtime-auth-idp:
+    build: .
+    container_name: realtime-auth-idp
+    ports:
+      - "4433:4433/udp"
+    volumes:
+      - ./config/config.toml:/app/config/config.toml
+      - ./certs:/app/certs
+    environment:
+      RUST_LOG: info
+    depends_on:
+      - redis
+    networks:
+      - rta-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: rta-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - rta-network
+
+networks:
+  rta-network:
+    driver: bridge

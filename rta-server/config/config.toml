@@ -1,0 +1,11 @@
+[server]
+host = "0.0.0.0"
+port = 4433
+cert_path = "/app/certs/server.crt"
+key_path = "/app/certs/server.key"
+
+[token]
+max_age_secs = 3600
+
+[redis]
+url = "redis://redis:6379"
