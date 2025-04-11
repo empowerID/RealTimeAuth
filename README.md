@@ -445,7 +445,7 @@ Here's a concise comparison highlighting why RTATokens outperform traditional JW
 
 ## 10.1 Integrating CAEP Events via Shared Signals Framework (SSF) and QUIC
 
- ![RTA Event Flow](/rta-server/design/rtatoken.png)
+ ![RTA Event Flow](/rta-server/design/events-flow.png)
 
 External Identity Providers (IdPs) and Policy Decision Points (PDPs) (e.g., [Okta](https://www.okta.com), [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/), [Google](https://about.google/)) emit standardized Security Event Tokens (SETs) via the Shared Signals Framework (SSF). RTA handles these events using two complementary mechanisms:
 
