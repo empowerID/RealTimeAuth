@@ -305,7 +305,7 @@ AI co-pilots and orchestration layers, empowered by continuously validated RTATo
 By combining initial OAuth authentication with continuous real-time evaluation, token binding to persistent QUIC sessions, and an event-driven update mechanism, **RealTimeAuth (RTA)** delivers a robust, low-latency solution tailored for the dynamic demands of modern, AI-driven multi-agent environments.
 
 
-![RTA Sequence Diagram](/design/rta-sequence-diagram.png)
+![RTA Sequence Diagram](/rta-server/design/rta-sequence-diagram.png)
 
 # 8. RealTimeAuth (RTA) High-Level Design and Flow
 
@@ -379,7 +379,7 @@ RTATokens are purpose-built dynamic tokens used within the RealTimeAuth (RTA) fr
 
 ## 9.1 What are RTATokens?
 
-![RTA Sequence Diagram](/design/rtatoken.png)
+![RTA Sequence Diagram](/rta-server/design/rtatoken.png)
 
 RTATokens are stateful authorization tokens explicitly designed for dynamic, continuously changing contexts. They do not rely on embedded static claims for offline validation. Instead, every RTAToken must always be revalidated against the current real-time authorization state managed by the RTA Server.
 
@@ -445,7 +445,7 @@ Here's a concise comparison highlighting why RTATokens outperform traditional JW
 
 ## 10.1 Integrating CAEP Events via Shared Signals Framework (SSF) and QUIC
 
- ![RTA Event Flow](/design/rtatoken.png)
+ ![RTA Event Flow](/rta-server/design/rtatoken.png)
 
 External Identity Providers (IdPs) and Policy Decision Points (PDPs) (e.g., [Okta](https://www.okta.com), [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/), [Google](https://about.google/)) emit standardized Security Event Tokens (SETs) via the Shared Signals Framework (SSF). RTA handles these events using two complementary mechanisms:
 
