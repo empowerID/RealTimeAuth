@@ -1,4 +1,4 @@
-# RealTimeAuth (RTA): Dynamic, Continuous Authorization Protocol for AI Environments
+# RealTimeAuth (RTA): Dynamic, Continuous Authorization Protocol for Modern AI Applications
 
 ## Table of Contents
 1. [Background: Navigating Stateless Protocols in Dynamic AI Environments](#1-background-navigating-stateless-protocols-in-dynamic-ai-environments)
