@@ -305,11 +305,13 @@ AI co-pilots and orchestration layers, empowered by continuously validated RTATo
 By combining initial OAuth authentication with continuous real-time evaluation, token binding to persistent QUIC sessions, and an event-driven update mechanism, **RealTimeAuth (RTA)** delivers a robust, low-latency solution tailored for the dynamic demands of modern, AI-driven multi-agent environments.
 
 
-![RTA Sequence Diagram](/rta-server/design/rta-sequence-diagram.png)
+
 
 # 8. RealTimeAuth (RTA) High-Level Design and Flow
 
 Below is the high-level design and flow of RealTimeAuth (RTA) in an AI-driven environment. This design starts with a Web Portal user login and then shows how the authentication flows from the AI Co-Pilot through to the AI Agents, with the RTA Server managing dynamic, continuous authorization in real time. The diagram also illustrates the integration of the RTA Server with an external Identity Provider (IdP) for token validation, and with an Event Broker/Policy Decision Point (PDP) to perform real-time policy checks.
+
+![RTA Sequence Diagram](/rta-server/design/rta-sequence-diagram.png)
 
 ## 8.1 Diagram Overview
 
