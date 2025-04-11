@@ -281,7 +281,7 @@ RealTimeAuth (RTA) streamlines continuous, dynamic authorization by building on 
 
 The user authenticates using a standard OAuth 2.0/OIDC flow with an external Identity Provider (IdP). An OAuth token is issued by the IdP, establishing the user's identity and initial permissions.
 
-## 7.2 Token Exchange via RTA Custom Grant Type (Newly Documented Step)
+## 7.2 Token Exchange via RTA Custom Grant Type 
 
 Upon receiving the IdP-issued OAuth token, the AI Co-Pilot or orchestration layer initiates a token exchange using the specialized RTA Custom Grant Type (`urn:ietf:params:oauth:grant-type:rta_token_exchange`) when interacting with the RTA server. This specialized grant includes the original OAuth token issued by the external IdP, agent-specific metadata for precise auditability, and a nonce or cryptographic challenge for replay attack protection. The RTA server validates the incoming OAuth token through introspection with the external IdP and issues a dynamic RTAToken that binds directly to the agent's context and QUIC session.
 
