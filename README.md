@@ -379,7 +379,7 @@ RTATokens are purpose-built dynamic tokens used within the RealTimeAuth (RTA) fr
 
 ## 9.1 What are RTATokens?
 
-![RTA Sequence Diagram](/rta-server/design/rtatoken.png)
+![RTA Sequence Diagram](/rta-server/design/RTAToken.png)
 
 RTATokens are stateful authorization tokens explicitly designed for dynamic, continuously changing contexts. They do not rely on embedded static claims for offline validation. Instead, every RTAToken must always be revalidated against the current real-time authorization state managed by the RTA Server.
 
