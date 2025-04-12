@@ -1,11 +1,40 @@
 [server]
-host = "0.0.0.0"
-port = 4433
-cert_path = "/app/certs/server.crt"
-key_path = "/app/certs/server.key"
+# Server configuration.
+host = "127.0.0.1"
+port = 443
+cert_path = "certs/server.pem"
+key_path = "certs/server.key"
 
 [token]
+# Token configuration.
 max_age_secs = 3600
 
 [redis]
-url = "redis://redis:6379"
+# Redis configuration (for event notifications, etc.).
+url = "redis://127.0.0.1/0"
+
+[idp]
+# Default provider to use (e.g., "azure", "okta", or "auth0").
+default = "azure"
+
+[idp.azure]
+# Azure AD configuration.
+introspection_url = "https://login.microsoftonline.com/<tenant>/oauth2/v2.0/introspect"
+client_id = "YOUR_AZURE_CLIENT_ID"
+client_secret = "YOUR_AZURE_CLIENT_SECRET"
+
+[idp.okta]
+# Okta configuration.
+introspection_url = "https://{yourOktaDomain}/oauth2/default/v1/introspect"
+client_id = "YOUR_OKTA_CLIENT_ID"
+client_secret = "YOUR_OKTA_CLIENT_SECRET"
+
+[idp.auth0]
+# Auth0 configuration.
+introspection_url = "https://{yourAuth0Domain}/userinfo"
+client_id = "YOUR_AUTH0_CLIENT_ID"
+client_secret = "YOUR_AUTH0_CLIENT_SECRET"
+
+[pdp]
+# PDP (Policy Decision Point) configuration.
+endpoint = "http://localhost:8081/check_policy"

@@ -51,6 +51,10 @@ redis = { version = "0.25", features = ["tokio-comp"] }
 
 # Utility crates
 hex = "0.4"
+base64 = "0.21"
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+
 
 [dev-dependencies]
 tokio-test = "0.4"
